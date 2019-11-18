@@ -39,15 +39,18 @@ h6 {
 }
 
 .logo {
-    height: 35px;
+    height: 80px;
+    width: auto;
 }
 
 .text-box {
-    position: relative;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50% );
     text-align: center;
+    display: block;
+    width: max-content;
 }
 .heading-primary {
     color: white;
@@ -59,9 +62,8 @@ h6 {
 
 .heading-primary-main {
     display: block;
-    padding: 1%;
     font-size: 60px;
-    font-weight: 700;
+    font-weight: 400;
     letter-spacing: 16px;
     animation: moveInLeft 1s ease-in-out;
 }
@@ -125,22 +127,24 @@ h6 {
 }
 
 .btn:link,
-.btn:visited{
+.btn:visited {
     text-transform: uppercase;
     text-decoration: none;
     padding: 15px 40px;
     display: inline-block;
     border-radius: 100px;
-    transition: all .2s ;
+    transition: all .2s ; 
+    position: relative;
 }
 
 .btn:hover {
-    transform: translateY(-0.3vh);
-    box-shadow: 0 10px 10px rgba(rgba(87, 81, 81, 0.432));
+    transform: translateY(-3px);
+    box-shadow: 0px 10px 20px rgba(0,0,0, 0.2);
 }
 
 .btn:active{
-    transform: translateY(-0.1vh);
+    transform: translateY(-1px);
+    box-shadow: 10px 5px 10px rgba(233, 224, 224, 0.336);;
 }
 
 .btn-white {
@@ -148,7 +152,7 @@ h6 {
     color: #777;
 }
 
-.btn::after{
+ .btn::after{
     content: "";
     display: inline-block;
     height: 100%;
@@ -156,12 +160,12 @@ h6 {
     border-radius: 100px;
 
     position: absolute;
-    top: 0%;
-    left: 0%;
+    top: 0;
+    left: 0;
     z-index: -1;
 
     transition: all .4s;
-}
+} 
 
 .btn:hover::after{
     transform: scale(1.5);
